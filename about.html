@@ -1,0 +1,280 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Alicia Beck</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+
+  <style>
+  body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f0dade;
+  }
+
+  .merienda {
+    font-family: 'Merienda', cursive;
+    color: #443124;
+    font-size: 30px;
+  }
+
+  .title {
+    font-family: 'Great Vibes', cursive;
+    color: #443124;
+    text-align: center;
+    font-size: 70px;
+  }
+
+  img {
+    margin-bottom: -7px
+  }
+
+  .w3-row-padding img {
+    margin-bottom: 12px
+  }
+
+  .great-vibes {
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    color: #231308;
+  }
+
+  footer {
+    background-color: #ffeef1;
+  }
+
+  footer a i {
+    text-decoration: none;
+  }
+
+  footer a {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+
+  p {
+  font-family: 'Lora', serif;
+}
+
+  .rounded-button {
+    background-color: white;
+    color: #555; /* Soft grey; adjust if needed */
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .courgette {
+    font-family: 'Courgette', cursive;
+  }
+
+  .rounded-button:hover {
+    background-color: #f0dade; /* Light pink background on hover */
+    color: #5a433c;             /* Match header color on hover */
+  }
+
+  .custom-sidebar {
+    background-color: #eecae6 !important;
+    z-index: 9999 !important;
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    width: 250px; /* Adjust width if needed */
+    height: 100%;
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Center the content horizontally */
+    padding-top: 0;
+  }
+
+  .w3-bar-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .w3-bar-item {
+    padding: 16px 0;
+    font-size: 35px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000; /* ensure it's above everything */
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+
+  .custom-hover:hover {
+    background-color: #f6d1ec !important;
+    color: #5a433c !important;
+  }
+
+  /* Flexbox Layout */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+  }
+
+  .heart-shape {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  clip-path: path("M 150 30 A 40 40 0 0 1 190 70 Q 150 110 110 70 A 40 40 0 0 1 150 30 Z");
+  -webkit-clip-path: path("M 150 30 A 40 40 0 0 1 190 70 Q 150 110 110 70 A 40 40 0 0 1 150 30 Z");
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+  .flex-container .text {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds soft shadow */
+  }
+
+  .flex-container .image {
+    flex: 1;
+    text-align: right;
+  }
+
+  .flex-container img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds soft shadow */
+  }
+
+  .closure {
+    font-family: 'Merienda', cursive;
+    color: #443124;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .flex-container .image {
+      text-align: center;
+    }
+  }
+  </style>
+  </head>
+  <body>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar custom-sidebar w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button close-button w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="index.html" class="w3-bar-item w3-button courgette custom-hover">Home</a>
+      <a href="gallery.html" class="w3-bar-item w3-button courgette custom-hover">Gallery</a>
+      <a href="about.html" class="w3-bar-item w3-button courgette custom-hover">About</a>
+      <a href="contactme.html" class="w3-bar-item w3-button courgette custom-hover">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Title Bar -->
+  <div style="background-color: #ffeef1; width: 100%; padding: 20px 0;">
+    <a href="index.html" style="text-decoration: none;">
+      <h1 class="title" style="margin: 0;">Alicia Beck</h1>
+    </a>
+  </div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <div class="w3-opacity">
+    <span class="w3-button w3-xxlarge w3-white w3-right sidebar-toggle" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </span> 
+  <div class="w3-clear"></div>
+  <header class="w3-center w3-margin-bottom">
+    <p class="merienda">About Me</p>
+  </header>
+  </div>
+
+  <!-- Flex Container with Image and Text -->
+  <div class="flex-container">
+    <!-- Text Section -->
+    <div class="text">
+      <p>Thank you for visiting my portfolio! I was born and raised in Stockholm, Sweden, residing here since 2006. I am Norwegian and Croatian, and my trips to Croatia is where my spark for pursuing digital art 
+        arised from my grandfather, Vladimir Beck, a professional painter. </p>
+      <p>My passion for art begun at a very young age, and ever since I've used the pen to convey my feelings. My pieces are extremely diverse, some are works made for friends as a sign of my gratitude, some 
+        works are used for video games and animations, and some pieces were created from raw emotion. 
+        I primarily work on my tablet with ProCreate since the direct "pen on paper" contact feels generally better. Two dimensional art is where I deliver my best work, however I am very eager to dive into three dimensional works in the future.</p>
+      <p>I plan to expand on my virtual and digital artistic abilities in hopes to explore anything involving art in growing fields. I am most interested in Concept art design for videogames or other media, as my brainstorming for finished products would be 
+        at its maximum potential.
+      </p>
+      <p>If you have any questions or wish to contact me for commissions, you can use any of the socials I have below or click <a href="contactme.html">here</a>.</p>
+
+    </div>
+    
+    <!-- Image Section -->
+    <div class="image">
+      <img src="Alicia.jpg" alt="Alicia Beck">
+    </div>
+  </div>
+
+  </div>
+
+  <div>
+    <p class="closure">Thank you for visiting my portfolio!</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xxlarge" style="margin-top:128px">
+    <a href="https://www.instagram.com/jinxzed_4vr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    </a>
+    
+    <a href="https://www.snapchat.com/add/oziriax" target="_blank" rel="noopener noreferrer">
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+    </a>
+
+    <a href="mailto:alicia.e.beck@icloud.com">
+      <i class="fa fa-envelope w3-hover-opacity"></i>
+    </a>
+  </footer>
+
+  <script>
+  // Open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.width = "100%";
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+
+  </body>
+  </html>

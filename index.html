@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alicia Beck</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f0dade;
+}
+
+.title {
+  font-family: 'Great Vibes', cursive;
+  color: #443124;
+  text-align: center;
+  font-size: 70px;
+}
+
+.merienda {
+  font-family: 'Merienda', cursive;
+  color: #443124;
+  font-size: 30px;
+}
+
+img {
+  margin-bottom: -7px
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px
+}
+
+.great-vibes {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  color: #231308;   /* Optional: match your header color */
+}
+
+footer {
+  background-color: #ffeef1;
+}
+
+footer a i {
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.rounded-button {
+  background-color: white;
+  color: #555; /* Soft grey; adjust if needed */
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Optional: adds a subtle border */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.courgette {
+  font-family: 'Courgette', cursive;
+}
+
+.rounded-button:hover {
+  background-color: #f0dade; /* Optional: light pink background on hover */
+  color: #5a433c;             /* Optional: match header color on hover */
+}
+
+.custom-sidebar {
+  background-color: #eecae6 !important;
+  z-index: 9999 !important;
+  position: fixed; /* Keep it fixed at the top */
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust width if needed */
+  height: 100%;
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Center the content horizontally */
+  padding-top: 0; /* Remove top padding */
+}
+
+.w3-bar-block {
+  text-align: center; /* Ensure text inside buttons is centered */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: center; /* Vertically center the items */
+  align-items: center; /* Horizontally center the items */
+  gap: 20px; /* Space between buttons */
+  padding: 0;
+}
+
+.w3-bar-item {
+  padding: 16px 0; /* Vertical padding to make buttons bigger */
+  font-size: 35px; /* Adjust the font size if necessary */
+  width: 100%; /* Ensure buttons fill the width of the sidebar */
+  display: block; /* Block level so they take up the full width */
+  text-align: center; /* Ensure text is centered inside the buttons */
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000; /* ensure it's above everything */
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.custom-hover:hover {
+  background-color: #f6d1ec !important; /* or another soft tone */
+  color: #5a433c !important;            /* Optional: match your theme */
+}
+
+.masonry-grid {
+  column-count: 3;
+  column-gap: 3px;
+  margin-bottom: 128px;
+  transition: column-gap 0.4s ease;
+}
+
+.masonry-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  break-inside: avoid;
+  transition: margin-bottom 0.4s ease;
+}
+
+.close-button {
+  background-color: #efb4e1 !important;
+  color: #333; /* Optional: icon color */
+  border: none;
+}
+
+.closure {
+  font-family: 'Merienda', cursive;
+  color: #443124;
+  font-size: 30px;
+  text-align: center;
+}
+
+.spread-out {
+  column-gap: 50px !important;
+}
+
+.spread-out img {
+  margin-bottom: 50px !important;
+}
+
+@media (max-width: 900px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+  @media (max-width: 600px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar custom-sidebar w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button close-button w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button courgette custom-hover">Home</a>
+    <a href="gallery.html" class="w3-bar-item w3-button courgette custom-hover">Gallery</a>
+    <a href="about.html" class="w3-bar-item w3-button courgette custom-hover">About</a>
+    <a href="contactme.html" class="w3-bar-item w3-button courgette custom-hover">Contact</a>
+  </div>
+</nav>
+
+  <!-- Title Bar -->
+  <div style="background-color: #ffeef1; width: 100%; padding: 20px 0;">
+    <a href="index.html" style="text-decoration: none;">
+      <h1 class="title" style="margin: 0;">Alicia Beck</h1>
+    </a>
+  </div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+  <span class="w3-button w3-xxlarge w3-white w3-right sidebar-toggle" onclick="w3_open()">
+    <i class="fa fa-bars"></i>
+  </span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <p class="merienda">Digital Artist and Animator | Graduated from LBS North Stockholm | Proficient in ProCreate</p>
+  <button class="w3-button rounded-button courgette" onclick="myFunction()">Toggle Separation</button>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="masonry-grid">
+  <img src="angel.PNG" alt="">
+  <img src="witch.png" alt="">
+  <img src="hoodie.PNG" alt="">
+  <img src="widowmaker.PNG" alt="">
+  <img src="sandwhich.gif" alt="">
+  <img src="flag.PNG" alt="">
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<div>
+  <p class="closure">Thank you for visiting my portfolio!</p>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xxlarge" style="margin-top:128px">
+  <a href="https://www.instagram.com/jinxzed_4vr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+  </a>
+  
+  <a href="https://www.snapchat.com/add/oziriax" target="_blank" rel="noopener noreferrer">
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+  </a>
+
+  <a href="mailto:alicia.e.beck@icloud.com">
+    <i class="fa fa-envelope w3-hover-opacity"></i>
+  </a>
+</footer>
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  const grid = document.querySelector('.masonry-grid');
+  grid.classList.toggle('spread-out');
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
